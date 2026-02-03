@@ -34,3 +34,8 @@ Base de données :
 - [ ] Dashboard : Créer le composant "Statistique" avec le dégradé.
 - [ ] Feed : Créer le template de carte pour une séance réalisée.
 - [ ] Routine : Créer la vue "Mes routines" avec les boutons "Démarrer vide" et "IA Coach".
+
+
+
+
+github test commit
