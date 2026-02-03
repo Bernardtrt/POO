@@ -1,0 +1,4 @@
+/home/mathieu/Documents/ATU/POO/MusicLab/obj/Debug/net8.0/MusicLab.GeneratedMSBuildEditorConfig.editorconfig
+/home/mathieu/Documents/ATU/POO/MusicLab/obj/Debug/net8.0/MusicLab.AssemblyInfoInputs.cache
+/home/mathieu/Documents/ATU/POO/MusicLab/obj/Debug/net8.0/MusicLab.AssemblyInfo.cs
+/home/mathieu/Documents/ATU/POO/MusicLab/obj/Debug/net8.0/MusicLab.csproj.CoreCompileInputs.cache

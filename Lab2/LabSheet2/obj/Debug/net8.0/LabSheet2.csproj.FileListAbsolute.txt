@@ -1,0 +1,14 @@
+/home/mathieu/Documents/ATU/POO/Lab2/LabSheet2/bin/Debug/net8.0/LabSheet2
+/home/mathieu/Documents/ATU/POO/Lab2/LabSheet2/bin/Debug/net8.0/LabSheet2.deps.json
+/home/mathieu/Documents/ATU/POO/Lab2/LabSheet2/bin/Debug/net8.0/LabSheet2.runtimeconfig.json
+/home/mathieu/Documents/ATU/POO/Lab2/LabSheet2/bin/Debug/net8.0/LabSheet2.dll
+/home/mathieu/Documents/ATU/POO/Lab2/LabSheet2/bin/Debug/net8.0/LabSheet2.pdb
+/home/mathieu/Documents/ATU/POO/Lab2/LabSheet2/obj/Debug/net8.0/LabSheet2.GeneratedMSBuildEditorConfig.editorconfig
+/home/mathieu/Documents/ATU/POO/Lab2/LabSheet2/obj/Debug/net8.0/LabSheet2.AssemblyInfoInputs.cache
+/home/mathieu/Documents/ATU/POO/Lab2/LabSheet2/obj/Debug/net8.0/LabSheet2.AssemblyInfo.cs
+/home/mathieu/Documents/ATU/POO/Lab2/LabSheet2/obj/Debug/net8.0/LabSheet2.csproj.CoreCompileInputs.cache
+/home/mathieu/Documents/ATU/POO/Lab2/LabSheet2/obj/Debug/net8.0/LabSheet2.dll
+/home/mathieu/Documents/ATU/POO/Lab2/LabSheet2/obj/Debug/net8.0/refint/LabSheet2.dll
+/home/mathieu/Documents/ATU/POO/Lab2/LabSheet2/obj/Debug/net8.0/LabSheet2.pdb
+/home/mathieu/Documents/ATU/POO/Lab2/LabSheet2/obj/Debug/net8.0/LabSheet2.genruntimeconfig.cache
+/home/mathieu/Documents/ATU/POO/Lab2/LabSheet2/obj/Debug/net8.0/ref/LabSheet2.dll
