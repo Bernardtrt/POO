@@ -12,3 +12,4 @@
 /home/mathieu/Documents/ATU/POO/Project/Lift/obj/Debug/net8.0/Lift.pdb
 /home/mathieu/Documents/ATU/POO/Project/Lift/obj/Debug/net8.0/Lift.genruntimeconfig.cache
 /home/mathieu/Documents/ATU/POO/Project/Lift/obj/Debug/net8.0/ref/Lift.dll
+/home/mathieu/Documents/ATU/POO/Project/Lift/obj/Debug/net8.0/Lift.sourcelink.json
