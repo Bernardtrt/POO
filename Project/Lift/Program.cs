@@ -5,7 +5,7 @@ class Programm
     static void Main()
     {
         Console.WriteLine("hello world !");
-        var monEntrainement = new Workout{Name = "Push", Date = DateTime.Now};
+        var monEntrainement = new Workout{Name = "push", Date = DateTime.now};
 
         var dc = new Exercice { Name = "Développé couché" };
         dc.sets.Add(new Set { Reps = 10, Weight = 80 });

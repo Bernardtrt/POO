@@ -1,0 +1,68 @@
+<Window
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:vm="using:LiftUI"
+        x:Class="LiftUI.MainWindow"
+        Title="LiftUI" Width="400" Height="600" Background="#1A1A1A">
+  <Grid>
+    <StackPanel x:Name="Acceuil" IsVisible="True" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="20">
+      <TextBlock x:Name="StatusText" 
+                       Text="Start a new workout ?" 
+                       FontSize="22" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center"/>
+      <Button x:Name="StartWorkoutBtn" 
+                    Content="Start an empty workout" 
+                    Width="200" Height="50" CornerRadius="8" Background="#2196F3" Foreground="White"
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                    Click="StartWorkoutBtn_Click" />
+    </StackPanel>
+    <StackPanel x:Name="inWorkout" IsVisible="False" Margin="20" Spacing="20">
+      <TextBlock x:Name="LiveWorkoutTitle" Text="Séance en cours" FontSize="20" Foreground="LightGreen" FontWeight="Bold"/>
+      <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
+        <ComboBox x:Name="ExerciceSelector" Width="200" PlaceholderText="Choisir un exercice..."/>
+        <Button x:Name="addexbtn"
+                        Content="Ajouter"
+                        Height="35" CornerRadius="8" Background="#569CFF" Foreground="White"
+                        Click="AddExercicebtn_Click" />
+      </StackPanel>
+      <ScrollViewer Height="350">
+        <ItemsControl x:Name="ExercicesList">
+          <ItemsControl.ItemTemplate>
+            <DataTemplate x:DataType="vm:Exercice">
+              <Border Background="#2A2A2A" CornerRadius="10" Margin="0,0,0,15" Padding="15">
+                <StackPanel Spacing="10">
+                  <TextBlock Text="{Binding Name}" FontSize="18" Foreground="#569CFF" FontWeight="Bold"/>
+                  <Grid ColumnDefinitions="*, *" Margin="0,5">
+                    <TextBlock Grid.Column="0" Text="KG" Foreground="Gray" HorizontalAlignment="Center"/>
+                    <TextBlock Grid.Column="1" Text="REPS" Foreground="Gray" HorizontalAlignment="Center"/>
+                  </Grid>
+                  <ItemsControl ItemsSource="{Binding Sets}">
+                    <ItemsControl.ItemTemplate>
+                      <DataTemplate x:DataType="vm:Set">
+                        <Grid ColumnDefinitions="*, *" Margin="0,2">
+                          <TextBox Grid.Column="0" Text="{Binding Weight}" Margin="5,0" TextAlignment="Center"/>
+                          <TextBox Grid.Column="1" Text="{Binding Reps}" Margin="5,0" TextAlignment="Center"/>
+                        </Grid>
+                      </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                  </ItemsControl>
+                  <Button Content="+ Add Set" 
+                                        Background="#333333" Foreground="White" 
+                                        HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+                                        Click="AddSetBtn_Click"/>
+                </StackPanel>
+              </Border>
+            </DataTemplate>
+          </ItemsControl.ItemTemplate>
+        </ItemsControl>
+      </ScrollViewer>
+      <Button x:Name="end_workout"
+                    Content="End workout"
+                    Height="40" CornerRadius="8" Background="#F44336" Foreground="White"
+                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                    Click="Endworkoutbtn_Click" />
+    </StackPanel>
+    <StackPanel x:Name="EndWorkout" IsVisible="False" HorizontalAlignment="Center" VerticalAlignment="Center">
+      <TextBlock x:Name="end_of_workout_txt" Text="End of Workout !" FontSize="24" Foreground="White"/>
+    </StackPanel>
+  </Grid>
+</Window>

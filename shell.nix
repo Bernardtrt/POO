@@ -3,11 +3,29 @@
 pkgs.mkShell {
   # Les paquets dont tu as besoin
   buildInputs = [
-    pkgs.dotnet-sdk_8 # Choisis ta version (6, 7, 8...)
-    pkgs.omnisharp-roslyn # Pour l'auto-complétion si tu utilises VS Code ou Vim
-    pkgs.netcoredbg # Pour le débugging
-  ];
+   
+    pkgs.dotnet-sdk_8
+    pkgs.omnisharp-roslyn
+    pkgs.netcoredbg
+    pkgs.sqlite
+    pkgs.dotnet-ef
+    # --- Les librairies graphiques pour l'interface Avalonia ---
+    pkgs.fontconfig
+    pkgs.freetype
+    pkgs.xorg.libX11
+    pkgs.xorg.libICE
+    pkgs.xorg.libSM
+    pkgs.libGL
+    ]; 
 
+  LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
+  pkgs.fontconfig
+  pkgs.freetype
+  pkgs.xorg.libX11
+  pkgs.xorg.libICE
+  pkgs.xorg.libSM
+  pkgs.libGL
+  ];
   # Variables d'environnement pour que .NET ne s'y perde pas
   shellHook = ''
     export DOTNET_ROOT=${pkgs.dotnet-sdk_8}
