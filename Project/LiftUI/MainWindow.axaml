@@ -1,3 +1,9 @@
+<!-- This thing work by pure magic, in dont understand how i did that in the first place
+future me dont try even fix this code since this draft isnt based from mvvm build,  
+If u decide to ignore this warning, please update counter  
+Total Time Wasted here : 3 hours 40 minutes 
+-->
+
 <Window
   xmlns="https://github.com/avaloniaui"
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"

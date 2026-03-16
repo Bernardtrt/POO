@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LiftUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77cf974b1d2eac5f8bb193cb079ab274b66ec2b6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c929bd23acca663daf5e7d359b4af90a424e9bb3")]
 [assembly: System.Reflection.AssemblyProductAttribute("LiftUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LiftUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
