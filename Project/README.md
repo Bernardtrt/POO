@@ -1,5 +1,5 @@
-Pour voir la maquette du logiciel, se rendre sur figma
-Logiciel permettant de noter ses seances de sport et traquer son evolution.
-Permet egalement de suivre les entrainements d'autres membre de la communautée.
+This project is a workout tracking software made using avalonia UI framework
+feel free to contact me on s00295668@atu.ie if you have any question
 
-Logiciel développé par Mathieu STUTZ
+To see the draft of the project, use dotnet run on /LiftUI
+Project currently under dev. in /LiftProject
