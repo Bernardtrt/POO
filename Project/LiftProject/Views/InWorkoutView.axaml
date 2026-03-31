@@ -1,0 +1,92 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:LiftProject.ViewModels"
+             xmlns:local="clr-namespace:LiftProject"
+             x:Class="LiftProject.Views.InWorkoutView"
+             x:DataType="vm:InWorkoutViewModel">
+
+
+    
+    <Grid>
+        
+        <StackPanel>
+        <StackPanel Spacing="20" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+                
+                <TextBlock Text="add an exercice" FontSize="22" Foreground="White" FontWeight="Bold" HorizontalAlignment="Center" />
+                
+                <ComboBox
+                           Width="200" 
+                           PlaceholderText="Choose an Exercice..."
+                           ItemsSource = "{Binding Exercices}"
+                           SelectedValue= "{Binding SelectedExercice}"
+                           >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate x:DataType="local:Exercice">
+                            <TextBlock Text="{Binding Name}"/>
+                        </DataTemplate>
+
+                    </ComboBox.ItemTemplate>      
+                </ComboBox>
+                
+                <Button Content="Valider le choix" 
+                        Command="{Binding AddExoCommand}" 
+                        HorizontalAlignment="Center" />
+                
+                
+            </StackPanel>
+            <ScrollViewer Height="350">
+                <ItemsControl ItemsSource="{Binding CurrentWorkout.Exercices}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="local:Exercice">
+                    <Border Background="#2A2A2A" CornerRadius="10" Margin="0,0,0,15" Padding="15">
+                        <StackPanel Spacing="10">
+                        <TextBlock Text="{Binding Name}" FontSize="18" Foreground="#569CFF" FontWeight="Bold"/>
+                        <Grid ColumnDefinitions="*, *" Margin="0,5">
+                            <TextBlock Grid.Column="0" Text="KG" Foreground="Gray" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column="1" Text="REPS" Foreground="Gray" HorizontalAlignment="Center"/>
+                        </Grid>
+
+                        <!-- la partie pour les sets-->
+                        <ItemsControl ItemsSource="{Binding Sets}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate x:DataType="local:Set">
+                                    <Grid ColumnDefinitions="*, *" Margin="0,2">  
+                                        <TextBox Grid.Column="0" 
+                                                Text="{Binding WeightUI}" 
+                                                Watermark="KG" Margin="5,0" 
+                                                TextAlignment="Center"
+                                                TextInputOptions.ContentType="Number"/>
+                                        <TextBox Grid.Column="1" 
+                                                Text="{Binding RepsUI}" 
+                                                Watermark="REPS" 
+                                                Margin="5,0" 
+                                                TextAlignment="Center"
+                                                TextInputOptions.ContentType="Number"/>
+                                        
+                                    </Grid>    
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>    
+                        </ItemsControl>
+                        <Button Content="Add set"
+                        Command="{Binding $parent[UserControl].((vm:InWorkoutViewModel)DataContext).AddSetsCommand}"
+                        
+                        CommandParameter="{Binding}" 
+                        
+                        HorizontalAlignment="Center" />
+                        
+                        </StackPanel>
+                    </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                </ItemsControl> 
+            </ScrollViewer>
+            <Button Content="End Workout" Command="{Binding EndWorkoutCommand}" />
+            
+            </StackPanel>
+
+
+                
+    </Grid>
+
+
+</UserControl>

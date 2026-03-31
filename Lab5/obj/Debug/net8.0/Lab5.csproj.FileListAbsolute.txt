@@ -1,5 +1,0 @@
-/home/mathieu/Documents/ATU/POO/Lab5/obj/Debug/net8.0/Lab5.GeneratedMSBuildEditorConfig.editorconfig
-/home/mathieu/Documents/ATU/POO/Lab5/obj/Debug/net8.0/Lab5.AssemblyInfoInputs.cache
-/home/mathieu/Documents/ATU/POO/Lab5/obj/Debug/net8.0/Lab5.AssemblyInfo.cs
-/home/mathieu/Documents/ATU/POO/Lab5/obj/Debug/net8.0/Lab5.csproj.CoreCompileInputs.cache
-/home/mathieu/Documents/ATU/POO/Lab5/obj/Debug/net8.0/Lab5.sourcelink.json

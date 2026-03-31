@@ -3,11 +3,15 @@
         xmlns:vm="using:LiftProject.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LiftProject"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        
         x:Class="LiftProject.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="LiftProject">
+        Title="LiftProject"
+        Width="400"
+        Height="650">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -15,6 +19,20 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <Grid RowDefinitions="Auto, *">
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Spacing="15" Margin="10">
+            <Button Command="{Binding GoToCommand}" CommandParameter="{x:Static local:Page.Acceuil}">
+                    Acceuil
+            </Button>
+            <Button Command="{Binding GoToCommand}" CommandParameter="{x:Static local:Page.Workout}">
+                    Workout
+            </Button>
+            <Button Command="{Binding GoToCommand}" CommandParameter="{x:Static local:Page.Profile}">
+                    Profile
+            </Button>
+        </StackPanel>
 
+        <ContentControl Grid.Row="1" Content="{Binding CurrentPage}" />
+    </Grid>
+    
 </Window>
